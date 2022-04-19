@@ -1,0 +1,20 @@
+#Este archivo contiene las actualizaciones más recientes de la aplicación. 
+
+"""
+	Estructura de las actualizaciones:
+__Fecha__
+__Versión__
+__Información__
+__TrabajoFuturo__
+"""
+
+#__ $$ __#
+Fecha: 28 de Mayo Del 2021
+Versión: 0.1.0
+¿¿__Información__??
+Se completo la primera versión de la aplicación.
+Se crearon los archivos principales de Templates
+Se crearon los archivos principales de CSS
+Se añadión una librería de JS (VideoJS)
+Se Creó el archivo Thumbnails.py // Principalmente se usará para crear thumbnails.
+
