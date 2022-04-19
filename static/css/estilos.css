@@ -131,9 +131,9 @@ article{
   align-items: center;
 }
 .carta_botons li{
-  font-size: 20px;
+  font-size: 25px;
   line-height: 50px;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 .carta_botons i{
   color: #0e151e;
@@ -141,6 +141,7 @@ article{
 .carta_botons img{
   display: block;
   object-fit: contain;
-  width: 20px;
+  width: 25px;
   align-self: center;
+  cursor: pointer;
 }

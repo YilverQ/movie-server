@@ -74,30 +74,26 @@ if __name__ == '__main__':
 	"""
 	#create thumbnail_folder
 	#-----------------------
-	lista = ["Temporada 1",
-			 "Temporada 2",
-			 "Temporada 3"]
+	lista = ["Harry Potter"]
 	for i in lista:
 		URL_FOLDER = os.getcwd() + "/static/img/thumbnails"
 		thumbnail = Thumbnails()
 
-		folder_ubication = URL_FOLDER + "/thumbnails_comiquitas/thumbnails_el_increible_mundo_de_gumball"
+		folder_ubication = URL_FOLDER + "/thumbnails_películas"
 		folder_name = f"thumbnails_{i.replace(' ', '_').lower()}"
 		
 		create_folder = thumbnail.make_folder(folder_name, folder_ubication)
-	"""
 
+	"""
 	#create thumbnail_file_img
 	#-----------------------
-	lista_thu = ["thumbnails_temporada_1",
-				 "thumbnails_temporada_2"]
+	lista_thu = ["thumbnails_películas"]
 
-	lista = ["Temporada 1",
-			 "Temporada 2"]
+	lista = ["Películas"]
 	thumbnail = Thumbnails()
 	for j in range(len(lista)):
-		Global_FOLDER = "/home/yilver/Videos" + "/Comiquitas/El Increible Mundo De Gumball/" + lista[j]
-		folder_ubication = os.getcwd() + "/static/img/thumbnails/thumbnails_comiquitas/thumbnails_el_increible_mundo_de_gumball/" + lista_thu[j] 
+		Global_FOLDER = "/home/yilver/Videos" + "/Películas"  #+ lista[j]
+		folder_ubication = os.getcwd() + "/static/img/thumbnails/thumbnails_películas" #+ lista_thu[j] 
 		files = get_list_items(Global_FOLDER)
 		for i in files:
 			image_thumbnail = thumbnail.make_thumbnail(i, Global_FOLDER)
@@ -105,4 +101,5 @@ if __name__ == '__main__':
 			image 	= thumbnail.resize_image(image, width = 350, height = 200)
 			message = thumbnail.save_image(image, folder_ubication, i)
 			print(message)
+	
 	

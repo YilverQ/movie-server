@@ -38,3 +38,11 @@ Versión: 0.2.0
 	Se eliminan fuentes viejas y se implementan otras.
 	Se realizó un cambio mejor del código Python con mejores prácticas.
 	Archivos App.py//model.py//thumbnails.py fueron modificados.
+
+
+__TrabajoFuturo__
+	Agregar a las actualizaciones Modulación.
+	Agregar a las actualizaciones Factorización del código.
+	Agregar servidor SMTP u OTRO.
+	Agregar Funcionalidad de Botones VLC.
+	--Revisar BUG de botones para descargar/reproducir/VLC para pantallas como TV.
