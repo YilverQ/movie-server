@@ -46,7 +46,7 @@ def video_online(folder, item_download):
 
 
 if __name__ == '__main__':
-	app.run(debug = True, host = "192.168.43.7",  port = 5000)
+	app.run(debug = True,  port = 5000)
 
 #host = 192.168.43.7
 #172.16.0.25
