@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="author" content="Yilver Quevedo from Infover">
+	<meta name="description" content="Servidor de Peliculas Para El Uso Domestico. Aquí podrás descargar y ver películas oneline sin costo alguno siempre y cuando sea para el uso personal.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- Title -->
+	<title>{{ datos["title"] }} - Movie Server</title>
+	
+	<!-- Estilos -->
+    <link rel="shortcut icon" type="image/x-icon"  href="{{ url_for('static', filename='img/favicon.png') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/main.css') }} ">
+</head>
+<body>
+	<div class="contain">
+	<nav>
+		<h1>Movie Server</h1>
+	</nav>
+	<article class="index_article">
+		{% for item in datos["tags"] %}
+			<div class="index_tag">
+			<a href="/folder/{{ item }}">
+				<div class="index_image_tag">
+					<img src="../static/img/{{ item }}.png" alt="Logo de {{ item }} desde Movie Server">
+				</div>
+				<div class="index_title_tag">
+					<h4 class="index_tag_title">{{ item }}</h4>
+				</div>
+			</a>
+			</div>
+		{% endfor %}
+	</article>
+	</div>
+</body>
+</html>

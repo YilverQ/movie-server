@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<article class="main">
+		<div class="contenedorVideo">
+			<h1 class="h1_video">{{ datos["title"] }}</h1>
+			<video controls>
+				<source src="file://{{ video['folder'] }}{{ video['item_download'] }}" type="video/mp4">
+			</video>
+		</div>
+	</article>
+{% endblock %}
+
+	

@@ -1,0 +1,40 @@
+#Este archivo contiene las actualizaciones más recientes de la aplicación. 
+
+"""
+	Estructura de las actualizaciones:
+__Fecha__
+__Versión__
+__Información__
+__TrabajoFuturo__
+"""
+
+#__ $$ __#
+Fecha: 28 de Mayo Del 2021
+Versión: 0.1.0
+¿¿__Información__??
+	Se completo la primera versión de la aplicación.
+	Se crearon los archivos principales de Templates
+	Se crearon los archivos principales de CSS
+	Se añadión una librería de JS (VideoJS)
+	Se Creó el archivo Thumbnails.py // Principalmente se usará para crear thumbnails.
+
+
+Fecha: 12 de Febrero Del 2022
+Versión: 0.1.1
+¿¿__Información__??
+	Se modificó el diseño de las cartas. Pasó a ser un bloque en vez de filas.
+	Se modifició el archivo Thumbnails.py
+	Se eliminó la dependencia con la librería JS.
+	Ya no se puede reproducir desde el navegador.
+	Ya no se puede descargar archivos mp4.
+
+
+Fecha: 10 de Marzo del 2022
+Versión: 0.2.0
+¿¿__Información__??
+	Se restructuró el diseño de la página.
+	Se añaden fuentes de iconos.
+	Se eliminan archivos CSS y se modularizan NAV/INDEX.
+	Se eliminan fuentes viejas y se implementan otras.
+	Se realizó un cambio mejor del código Python con mejores prácticas.
+	Archivos App.py//model.py//thumbnails.py fueron modificados.

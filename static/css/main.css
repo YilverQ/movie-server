@@ -1,0 +1,141 @@
+/* Colores */
+/*
+    #0e151e
+    #1e2433
+    #293045
+    #6e5d81
+    #ab82ae
+    #fcb2e4
+*/
+/*  dad6cd  */
+
+/*Para Todo*/
+/**/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{text-decoration: none;}
+li{list-style: none;}
+/*Fin Para Todo*/
+
+/*Fuentes*/
+@font-face{
+    font-family: fuente1;
+    src: url(../fonts/CaviarDreams.ttf); 
+}
+@font-face{
+    font-family: fuente2;
+    src: url(../fonts/Comfortaa-Regular.ttf); 
+}
+@font-face{
+    font-family: fuente3;
+    src:url(../fonts/Roboto-Light.ttf); 
+}
+/*Fin de la Fuentes*/
+
+/*Estructura*/
+body {
+  background: #e9e9e9;  
+}
+h1, h2, h3, h4{
+  font-family: fuente2;
+  color: black;
+  font-weight: 700;
+}
+p, li, a{
+  font-family: fuente1;
+  color:#2d3436;
+  line-height: 20px;
+  font-display: block;
+}
+p{
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+/*Fin de la Estructura*/
+
+.contain{
+	width: 100%;
+	height: 100vh;
+	background-image: url("../img/fondo.png"); 
+	background: #0e151e;
+	display: flex;
+	flex-flow: column nowrap;
+	flex-grow: 2;
+}
+nav{
+	width: 100%;
+	height: 40px;
+}
+nav h1{
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	cursor: context-menu;
+	color: white;
+}
+.index_article{
+	width: 100%;
+	height: 80vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.index_tag{
+	width: 130px;
+	height: 150px;
+	border-radius: 5px;
+}
+.index_tag a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	overflow: hidden;
+	align-items: center;
+	justify-content: space-around;
+}
+.index_image_tag{
+	width: 100%;
+	height: 100px;
+}
+.index_image_tag img{
+	display: block;
+	object-fit: contain;
+    height: 100px;
+    margin: auto;
+}
+.index_title_tag h4{
+	font-size: 14px;
+	text-align: center;
+	color: white;
+}
+@media (max-width: 550px){      
+    .index_article{
+    	flex-flow: row wrap;
+    	height: 90vh;
+    	justify-content: space-evenly;
+		align-content: flex-start;
+    }
+	.index_tag{
+		width: 120px;
+		height: 120px;
+		margin-top: 20px;		
+	}
+	.index_image_tag{
+		height: 90px;
+	    width: 100px;
+	}
+	.index_image_tag img{
+	    height: 90px;
+	    width: 100px;
+	}
+	.index_title_tag h4{
+		font-size: 12px;
+	}
+}
