@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoJS.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/videoStyle.css') }}">
+{% endblock %}
+
+{% block content %}
+	<h1 class="h1_video">{{ datos["title"] }}</h1>
+	<video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
+		<source src="/static/img/proof.mp4" type="video/mp4">
+	</video>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/video.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
