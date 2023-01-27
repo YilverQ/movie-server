@@ -1,0 +1,66 @@
+/* Colores */
+/*
+    #0e151e
+    #616774
+    #e0daf7;  
+    #0a0a0a
+    #18181b
+*/
+
+/*Para Todo*/
+/**/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{text-decoration: none;}
+li{list-style: none;}
+/*Fin Para Todo*/
+
+/*Fuentes*/
+@font-face{
+    font-family: fuente1;
+    src: url(../fonts/OpenSans-Regular.ttf); 
+}
+@font-face{
+    font-family: fuente2;
+    src:url(../fonts/Comfortaa-Regular.ttf); 
+}
+@font-face{
+    font-family: fuente3;
+    src:url(../fonts/Roboto-Light.ttf); 
+}
+@font-face{
+    font-family: fuente4;
+    src:url(../fonts/Roboto-Regular.ttf); 
+}
+/*Fin de la Fuentes*/
+
+/*Estructura*/
+body{
+  background: #18181b;  
+  transition: .3s all;
+}
+
+body.lightMode{
+  background: #e0daf7;
+  transition: .3s all;
+}
+
+h1, h2, h3, h4{
+  font-family: fuente2;
+  color: black;
+  font-weight: 700;
+}
+p, li, a{
+  font-family: fuente1;
+  color:#616774;
+  line-height: 20px;
+  font-display: block;
+}
+p{
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+/*Fin de la Estructura*/

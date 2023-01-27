@@ -1,0 +1,105 @@
+#Este archivo contiene las actualizaciones más recientes de la aplicación. 
+
+"""
+	Estructura de las actualizaciones:
+__Fecha__
+__Versión__
+__Información__
+__TrabajoFuturo__
+"""
+
+#__ $$ __#
+Fecha: 28 de Mayo Del 2021
+Versión: 0.1.0
+¿¿__Información__??
+	Se completo la primera versión de la aplicación.
+	Se crearon los archivos principales de Templates
+	Se crearon los archivos principales de CSS
+	Se añadión una librería de JS (VideoJS)
+	Se Creó el archivo Thumbnails.py // Principalmente se usará para crear thumbnails.
+
+
+Fecha: 12 de Febrero Del 2022
+Versión: 0.1.1
+¿¿__Información__??
+	Se modificó el diseño de las cartas. Pasó a ser un bloque en vez de filas.
+	Se modifició el archivo Thumbnails.py
+	Se eliminó la dependencia con la librería JS.
+	Ya no se puede reproducir desde el navegador.
+	Ya no se puede descargar archivos mp4.
+
+
+Fecha: 10 de Marzo del 2022
+Versión: 0.2.0
+¿¿__Información__??
+	Se restructuró el diseño de la página.
+	Se añaden fuentes de iconos.
+	Se eliminan archivos CSS y se modularizan NAV/INDEX.
+	Se eliminan fuentes viejas y se implementan otras.
+	Se realizó un cambio mejor del código Python con mejores prácticas.
+	Archivos App.py//model.py//thumbnails.py fueron modificados.
+
+
+Fecha: 12 de Agosto del 2022
+Versión: 0.2.1
+¿¿__Información__??
+	Se agregó la funcionalidad de copiar el link de descarga para VLC.
+	Se factorizó el código "app.py" y "model.py".
+	Se eliminó la opción de ver online. 
+	Se cambiaron algunos iconos. 
+	Se cambió el color de fondo.
+	Se actualizó el archivo "requerements.txt".
+	Se agregó una variable de entorno.
+	Se creó una carpeta thumbnails. 
+	Se mejoró la forma de crear thumbnails.
+	Se modularizó los archivos css.
+
+
+Fecha: 19 de Agosto del 2022
+Versión: 0.2.2
+¿¿__Información__??
+	Se cambió el diseño de la página.
+	Se cambiaron los colores de la web.
+	Se factorizó el archivo "thumbnails.py" (Ahora es mucho más rápido).
+	Se agregó color al navegador cuando se ve desde un teléfono.
+	Se agregaron nuevas películas y sus archivos thumbnails.
+
+
+Fecha: 3 de Septiembre del 2022
+Versión: 0.2.3
+¿¿__Información__??
+	Se agrego un modo nocturno y diurno.
+	Se agregó un tooltip para cuando se hace click en el icono de VLC.
+	Se eliminó el mensaje de alerta al copiar los enlaces VLC.
+	Se agregó un toggle switch para cambiar de modo nocturo a diurno y viceversa.
+	Se modificó el diseño responsive para teléfonos (Ahora es más pequeño).
+
+
+Fecha: 6 de Enero del 2023
+Versión: 0.2.4
+¿¿__Información__??
+	Se eliminó un archivo llamado url.js
+	El archivo no tenía ninguna funcionalidad racional dentro del programa. 
+	Se instaló una nueva librería llamada pyinstaller. la cual sirve para crear archivos ejecutables. 
+	La ruta (dirección_IP y el puerto) se han añadido al archivo .env para mayor facilidad al cambiar de dispositivos. 
+	Se limpio la carpeta thumbnails para las imagenes. 
+	Se solucionó el error de copiar links viejos en la imagen de VLC. (Se copiaba la ip antigua y esta no era dinámica)
+	Ahora se ignora la carpeta "Capturas" de la raíz de "Vídeos" en Windows.
+	Debería acomodar las importaciones como lo hice una vez en un proyecto de flask avanzado...
+	Ahora se crean los archivos thumbnails al ejecutar el servidor de películas.
+
+
+Fecha: 27 de Enero del 2023
+Versión: 0.2.5
+¿¿__Información__??
+	Se modificó la mayoría del código fuente. 
+	Se agregó un archivo config donde se tiene toda la configuración necesaria para ejecutar la aplicación. 
+	Se eliminó las dependencias basuras. 
+	Se eliminó varios archivos. 
+	Se mejoró la estructura de las carpetas. 
+
+
+__TrabajoFuturo__
+	Agregar un boton para regresar.
+	Mejorar las importaciones en los archivos como lo hice una vez en un proyecto avanzado de Flask.
+	Agregar Programación Orientada a Objetos.

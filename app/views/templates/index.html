@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="author" content="Yilver Quevedo from Infover">
+	<meta name="description" content="Servidor de Peliculas Para El Uso Domestico. Aquí podrás descargar y ver películas oneline sin costo alguno siempre y cuando sea para el uso personal.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#18181b" >
+
+	<!-- Title -->
+	<title>{{ title }} - Movie Server</title>
+	
+	<!-- Estilos -->
+    <link rel="shortcut icon" type="image/x-icon"  href="{{ url_for('static', filename='img/favicon.png') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/nav.css') }} ">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/main.css') }} ">
+</head>
+<body>
+	<div class="contain">
+	<nav class="nav">
+		<div class="nav__menu">
+			<a href="/"><img class="nav__icon" src="{{ url_for('static', filename='img/favicon.png') }}"></a>
+			<a href="/"><h1 class="nav__title">Movie Server</h1></a>
+		</div>
+	</nav>
+	<article class="index_article">
+		<div class="index_article__description">
+			<h2 class="index_article__title">¡Bienvenido al mejor sitio de películas!</h2>
+			<p class="index_article__text">Movie Server, una página web para disfrutar sin costo alguno de las mejores Series, Películas y Animes provenientes de las mejores plataformas de streaming.</p>
+		</div>
+		<div class="index_article_tags">
+		{% for item in tags %}
+			<div class="index_tag">
+			<a href="/folder/{{ item }}">
+				<div class="index_image_tag">
+					<img src="../static/img/{{ item }}.png" alt="Logo de {{ item }} desde Movie Server">
+				</div>
+				<div class="index_title_tag">
+					<h4 class="index_tag_title">{{ item }}</h4>
+				</div>
+			</a>
+			</div>
+		{% endfor %}
+		</div>
+	</article>
+	</div>
+</body>
+</html>

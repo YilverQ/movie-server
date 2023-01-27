@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+	<article class="main">
+		<!-- Videos Items -->
+		<div class="flex_cartas">
+		{% for i in files %}
+			<div class="carta">
+				<div class="carta_img">
+					<img src="../static/img/thumbnails/{{ location }}/{{ i[:-4].replace('-',' ') }}.jpg" alt="Imagen de {{ i }}">
+				</div>
+				<div class="contenedorCartaBotons">
+					<div class="carta_title">
+						<h3>{{ i[:-4].replace('-',' ').title() }}</h3>
+					</div>
+					<div class="carta_botons">
+						<ul>
+							{% if ".mp4" in i %}
+							<li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}"><i class="fa-solid fa-play"></i></a></li>
+							{% endif %}
+							<li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}" download="true"><i class="fa-solid fa-download"></i></a></li>
+							<li class="tooltip"><p class="tooltip__message">¡Link copiado!</p><img class="imagenVLC" src="../static/img/vlc.png"><p class="hidden">http://{{ adress }}/download_video/{{ location }}/{{ i }}</p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		<!-- Folder Items -->
+		{% for i in folders %}
+			<div class="carta_folder">
+				<a href="/folder/{{ location.replace('/', '&').replace(' ', '-') }}&{{ i }}">
+				<div class="carta_img_folder">
+					<img class="folder_png" src="/static/img/folder.png" alt="Imagen de una Carpeta">
+				</div>
+				<div class="carta_title_folder">
+					<h3>{{ i.replace('-', ' ') }}</h3>
+				</div>
+				</a>
+			</div>
+		{% endfor %}
+		</div>
+	</article>
+{% endblock %}

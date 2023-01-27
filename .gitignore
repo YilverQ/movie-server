@@ -1,0 +1,8 @@
+./venv
+/venv
+venv
+venv/*
+
+
+/app/views/static/img/thumbnails/*
+app/views/static/img/thumbnails/*

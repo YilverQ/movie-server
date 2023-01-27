@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="author" content="Yilver Quevedo">
+	<meta name="description" content="Servidor de Peliculas Para El Uso Domestico. Aquí podrás descargar y ver películas oneline sin costo alguno siempre y cuando sea para el uso personal.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#18181b" >
+
+	<!-- Title -->
+	<title>{{ title }} - Movie Server</title>
+	
+	<!-- Estilos -->
+    <link rel="shortcut icon" type="image/x-icon"  href="{{ url_for('static', filename='img/favicon.png') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/all.min.css') }} ">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/nav.css') }} ">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/estilos.css') }} ">
+</head>
+<body>
+	<header>
+		<nav class="nav">
+			<input type="checkbox" id="res-menu">
+			<label class="res-menu" for="res-menu">
+				<i class="fa-solid fa-bars" id="sign-one"> </i>
+				<i class="fa-solid fa-xmark" id="sign-two"> </i>
+			</label>
+			<div class="nav__menu">
+				<a href="/"><img class="nav__icon" src="{{ url_for('static', filename='img/favicon.png') }}"></a>
+				<a href="/"><h1 class="nav__title">Movie Server</h1></a>
+			</div>
+			<div class="wrapToggle">
+				<input type="checkbox" id="light" class="offscreen">
+				<label for="light" class="switch"></label>
+			</div>
+			<ul>
+				{% for item in tags %}
+				<li><a href="/folder/{{ item }}">
+					<div class="image_tag">
+						<img class="nav__img_tag" src="/static/img/{{ item }}.png" alt="Logo de {{ item }} desde Movie Server">
+					</div>
+					<h4>{{ item }}</h4>
+				</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+	
+	{% block content %}
+	{% endblock %}
+
+	<script src="{{ url_for('static', filename='js/copy.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/dark.js') }}"></script>
+</body>
+</html>
