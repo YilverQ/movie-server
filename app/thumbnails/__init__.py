@@ -28,12 +28,15 @@ def make_thumbnails():
 				print(f"File already exists ({file})")
 				continue
 
-			image_thumbnail = thumbnail.make_thumbnail(file, folderName)
-			image   = thumbnail.make_thumbnail_image(image_thumbnail)
-			image   = thumbnail.resize_image(image, width = 350, height = 200)
-			message = thumbnail.save_image(image, folder_ubication, file)
-			print(message)
-
+			try:
+				image_thumbnail = thumbnail.make_thumbnail(file, folderName)
+				image   = thumbnail.make_thumbnail_image(image_thumbnail)
+				image   = thumbnail.resize_image(image, width = 350, height = 200)
+				message = thumbnail.save_image(image, folder_ubication, file)
+				print(message)
+			except:
+				error_message = f'Ha ocurrido un error con el archivo: {file}'
+				print(error_message)
 		print('')
 
 

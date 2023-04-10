@@ -12,10 +12,10 @@
 """
 
 class Config:
-	SERVER_NAME = '192.168.2.103:5000'
+	SERVER_NAME = '192.168.2.112:5000'
 	DEBUG = True
 
 	TEMPLATE_FOLDER = 'views/templates/'
 	STATIC_FOLDER 	= 'views/static/'
-	VIDEO_FOLDER 	= '/home/biagni/Vídeos/'
+	VIDEO_FOLDER 	= '/home/canaima/Vídeos/'
 	FOLDER_THUMBNAILS = '/app/views/static/img/thumbnails/'

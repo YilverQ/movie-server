@@ -6,3 +6,16 @@ venv/*
 
 /app/views/static/img/thumbnails/*
 app/views/static/img/thumbnails/*
+
+
+*/__pycache__
+__pycache__/*
+__pycache__/
+*/__pycache__/**
+
+**/__pycache__/
+__pycache__
+**/__pycache__/**
+
+__pycache__/
+ *.pyc

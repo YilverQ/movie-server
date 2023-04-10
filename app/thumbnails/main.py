@@ -43,4 +43,5 @@ def make_thumbnails():
 		print('')
 
 if __name__ == '__main__':
-	make_thumbnails()
+	#make_thumbnails()
+	continue
