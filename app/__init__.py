@@ -16,6 +16,7 @@
 from flask import Flask
 from config import Config
 from .routes import global_scope
+from .thumbnails import *
 
 app = Flask(__name__, 
 			static_folder = Config.STATIC_FOLDER,
@@ -23,3 +24,4 @@ app = Flask(__name__,
 app.config.from_object(Config)
 
 app.register_blueprint(global_scope, url_prefix = '/')
+make_thumbnails()

@@ -10,12 +10,15 @@
 	VIDEO_FOLDER = Ubicación de nuestros vídeos. 
 	FOLDER_THUMBNAILS = Ubicación dónde estarán las miniaturas de los vídeos.
 """
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 class Config:
-	SERVER_NAME = '192.168.2.112:5000'
-	DEBUG = True
+    SERVER_NAME = os.getenv('SERVER_NAME')  
+    DEBUG = os.getenv('DEBUG', 'False') == 'True'  
 
-	TEMPLATE_FOLDER = 'views/templates/'
-	STATIC_FOLDER 	= 'views/static/'
-	VIDEO_FOLDER 	= '/home/canaima/Vídeos/'
-	FOLDER_THUMBNAILS = '/app/views/static/img/thumbnails/'
+    TEMPLATE_FOLDER = 'views/templates/'
+    STATIC_FOLDER = 'views/static/'
+    VIDEO_FOLDER = os.getenv('VIDEO_FOLDER')
+    FOLDER_THUMBNAILS='/app/views/static/img/thumbnails/'

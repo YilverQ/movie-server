@@ -1,21 +1,34 @@
-./venv
-/venv
-venv
-venv/*
-
-
+#Archivos Thumbs
 /app/views/static/img/thumbnails/*
 app/views/static/img/thumbnails/*
 
+# Entorno virtual
+venv/
+env/
+.env
 
-*/__pycache__
-__pycache__/*
+# Archivos de compilación de Python
 __pycache__/
-*/__pycache__/**
+*.py[cod]
 
-**/__pycache__/
-__pycache__
-**/__pycache__/**
+# Archivos de configuración del sistema
+*.db
+*.sqlite3
 
-__pycache__/
- *.pyc
+# Archivos de log
+*.log
+
+# Archivos de configuración de IDEs
+.idea/
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.temp
+.DS_Store
+
+# Otros archivos que no deseas rastrear
+*.pyo
+*.egg-info/
+dist/
+build/
