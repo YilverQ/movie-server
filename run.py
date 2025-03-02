@@ -1,8 +1,8 @@
-"""
-	Importamos nuestra aplicación. 
-	Ejecutamos nuestra aplicación
-"""
 from app import app
+from app.thumbnails import init_thumbnails
+from app.helpers import init_folders_videos
 
 if __name__ == '__main__':
-	app.run() #No añadir parámetros, modificar en el archivo 'config'.
+    init_folders_videos()
+    init_thumbnails()
+    app.run()

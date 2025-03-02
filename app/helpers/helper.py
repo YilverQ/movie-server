@@ -7,7 +7,7 @@
 		- : son espacios en blancos.
 """
 
-def format_url(string):
+def format_url_to_path(string):
 	string = string.replace("-", " ")
 	string = string.replace("&", "/")
 	return string

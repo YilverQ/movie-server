@@ -8,21 +8,16 @@ import os
 from config import Config
 
 class Folder_DB:
-	def get_folders(self, folder = ''):
-		folders = []
-		location = Config.VIDEO_FOLDER + folder
-		for item in os.listdir(location):
-			if (not '_' in item) and (not '.' in item):
-				folders.append(item)
-		folders.sort()
-		return folders
+	def get_folders(self, folder=''):
+	    location = os.path.join(Config.VIDEO_FOLDER, folder)
+	    #listar solamente las carpetas
+	    folders = [item for item in os.listdir(location) if os.path.isdir(os.path.join(location, item))]
+	    folders.sort()
+	    return folders
 
 
-	def get_files(self, folder = ''):
-		files = []
-		location = Config.VIDEO_FOLDER + folder
-		for item in os.listdir(location):
-			if not ('_' in item) and '.' in item:
-				files.append(item)
-		files.sort()
-		return files
+	def get_files(self, folder=''):
+	    location = os.path.join(Config.VIDEO_FOLDER, folder)
+	    files = [item for item in os.listdir(location) if os.path.isfile(os.path.join(location, item))]
+	    files.sort()
+	    return files

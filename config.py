@@ -21,4 +21,4 @@ class Config:
     TEMPLATE_FOLDER = 'views/templates/'
     STATIC_FOLDER = 'views/static/'
     VIDEO_FOLDER = os.getenv('VIDEO_FOLDER')
-    FOLDER_THUMBNAILS='/app/views/static/img/thumbnails/'
+    FOLDER_THUMBNAILS=os.path.join(os.getcwd(), 'app/views/static/img/thumbnails')

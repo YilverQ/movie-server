@@ -11,6 +11,20 @@ __Cuerpo de Actualizaciones__
 
 ########################################################################################################################
 ------------------------------------------------------------------------------------------------------------------------
+Fecha: 02/03/2025
+Versión: 0.3.0.0
+Actualizaciones:
+    * Se creó nueva configuración para el servidor
+    * Los archivos config y run.py ahora son más fáciles de entender. 
+    * Se creó un nuevo archivo thumb, sirve para crear las carpetas en img
+    * Se refactorizó el código de thumbnails
+    * Se refactorizó parte del código de database y helpers. 
+    * Se acomodó la ruta de routes y la vista. 
+    * Se acomodó el botón de descarga.
+    * Se creó un archivo '.env' y '.env.copy'. 
+
+
+------------------------------------------------------------------------------------------------------------------------
 Fecha: 22/02/2025
 Versión: 0.2.5.1
 Actualizaciones:
