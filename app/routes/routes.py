@@ -40,7 +40,6 @@ def folder(element):
 
 @global_scope.route('/download_video/<string:folder>/<string:item_download>')
 def download_video(folder, item_download):
-	item_download = format_url_to_path(item_download)
 	folder = format_url_to_path(folder)
 	folder_path = os.path.join(Config.VIDEO_FOLDER, folder)
 	return send_from_directory(folder_path, item_download)

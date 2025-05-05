@@ -17,8 +17,13 @@
 	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/all.min.css') }} ">
 	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/nav.css') }} ">
 	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/estilos.css') }} ">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/loading.css') }} ">
 </head>
 <body>
+	<div id="loading-screen">
+	  <div class="loader"></div>
+	</div>
+
 	<header>
 		<nav class="nav">
 			<input type="checkbox" id="res-menu">

@@ -1,16 +1,13 @@
-#Este archivo contiene las actualizaciones más recientes de la aplicación. 
+-----------------------------------------------------------------------------------------------
+Fecha: 05/05/2025
+Versión: 0.3.0.1
+Actualizaciones:
+    * Se acomodó el responsive de las tarjetas. 
+    * Se agregó una ventana de carga. 
+    * Se agregó compatibilidad con archivos de Imagenes. 
+    * Se agregó compatibilidad con archivos de Música. 
 
-"""----------------------------------------------------------
-Estructura de las actualizaciones:
-__Fecha__
-__Versión__
-__Actualizaciones__
-__Cuerpo de Actualizaciones__
-----------------------------------------------------------"""
-
-
-########################################################################################################################
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 02/03/2025
 Versión: 0.3.0.0
 Actualizaciones:
@@ -24,7 +21,7 @@ Actualizaciones:
     * Se creó un archivo '.env' y '.env.copy'. 
 
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 22/02/2025
 Versión: 0.2.5.1
 Actualizaciones:
@@ -32,7 +29,7 @@ Actualizaciones:
 	* Se creó un archivo '.env' y '.env.copy'. 
 
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 27/03/2023
 Versión: 0.2.5
 Actualizaciones:
@@ -42,7 +39,7 @@ Actualizaciones:
     * Se eliminaron varios archivos obsoletos.
     * Se mejoró la estructura de las carpetas.
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 06/01/2023
 Versión: 0.2.4
 Actualizaciones:
@@ -55,7 +52,7 @@ Actualizaciones:
     * Se recomienda acomodar las importaciones como se hizo en un proyecto avanzado de Flask.
     * Ahora se generan los archivos thumbnails al ejecutar el servidor de películas.
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 03/09/2022
 Versión: 0.2.3
 Actualizaciones:
@@ -66,7 +63,7 @@ Actualizaciones:
     * Se modificó el diseño responsive para teléfonos, haciéndolo más compacto.
 
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 19/08/2022
 Versión: 0.2.2
 Actualizaciones:
@@ -77,7 +74,7 @@ Actualizaciones:
     * Se incorporaron nuevas películas y sus archivos thumbnails.
 
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 12/08/2022
 Versión: 0.2.1
 Actualizaciones:
@@ -92,7 +89,7 @@ Actualizaciones:
     * Se mejoró el proceso de creación de thumbnails.
     * Se modularizaron los archivos CSS.
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 10/03/2022
 Versión: 0.2.0
 Actualizaciones:
@@ -103,7 +100,7 @@ Actualizaciones:
     * Se mejoró el código Python siguiendo mejores prácticas.
     * Se modificaron los archivos app.py, model.py y thumbnails.py.
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 12/02/2022
 Versión: 0.1.1
 Actualizaciones:
@@ -113,7 +110,7 @@ Actualizaciones:
     * Ya no es posible reproducir contenido desde el navegador.
     * Ya no se pueden descargar archivos MP4.
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Fecha: 28/05/2021
 Versión: 0.1.0
 Actualizaciones:

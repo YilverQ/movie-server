@@ -1,48 +1,38 @@
-let light = document.querySelector("#light");
-const body = document.querySelector("body");
-const carta = document.querySelectorAll(".carta");
-const carta_title = document.querySelectorAll(".carta_title");
-const carta_title_folder = document.querySelectorAll(".carta_title_folder");
-const carta_botons = document.querySelectorAll(".carta_botons");
+const light = document.querySelector("#light");
+const body = document.body;
+const loadingScreen = document.getElementById("loading-screen");
 
+// Agrupa todos los selectores de elementos que deben cambiar con el modo
+const elementsToToggle = [
+  ...document.querySelectorAll(".carta"),
+  ...document.querySelectorAll(".carta_title"),
+  ...document.querySelectorAll(".carta_title_folder"),
+  ...document.querySelectorAll(".carta_botons")
+];
 
-function addLightMode(){
-	body.classList.toggle("lightMode");
-	//for of
-	for (cart of carta){
-		cart.classList.toggle("light");
-	}
-	
-	for (title of carta_title){
-		title.classList.toggle("light");
-	}
-
-	for (title of carta_title_folder){
-		title.classList.toggle("light");
-	}
-
-	for (icon of carta_botons){
-		icon.classList.toggle("light");
-	}
+// Función para aplicar o quitar el modo claro según el estado (true/false)
+function setLightMode(isLight) {
+  body.classList.toggle("lightMode", isLight);
+  elementsToToggle.forEach(el => el.classList.toggle("light", isLight));
 }
 
-light.addEventListener("click", e =>{
-	addLightMode();
-	store(body.classList.contains("lightMode"));
-})
+// Cambia el modo claro u oscuro al hacer click y guarda el estado
+light.addEventListener("click", () => {
+  const isLight = light.checked;
+  setLightMode(isLight);
+  localStorage.setItem("lightMode", isLight);
+});
 
-function load(){
-	const dark = localStorage.getItem("lightMode");
+// Carga el modo guardado o establece el modo por defecto
+function load() {
+  const isLight = localStorage.getItem("lightMode") === "true";
+  light.checked = isLight;
+  setLightMode(isLight);
 
-	if (!dark){
-		store("false");
-	}else if (dark == "true"){
-		light.checked = true;
-		addLightMode();
-	}
+  if (loadingScreen) {
+    loadingScreen.style.display = "none";
+  }
 }
-function store(value){
-	localStorage.setItem("lightMode", value);
-}
 
-load();
+// Ejecutar load cuando el DOM esté listo
+document.addEventListener("DOMContentLoaded", load);

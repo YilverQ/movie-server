@@ -45,6 +45,12 @@ article{
   height: 100px;
   margin: auto;
 }
+.carta_img .imagen_music{
+  margin: auto;
+  width: 150px;
+  display: block;
+  object-fit: contain;
+}
 .contenedorCartaBotons{
   width: 100%;
   display: flex;
@@ -57,6 +63,13 @@ article{
   font-family: fuente3;
   font-weight: 700;
   color: white;
+
+  /* Para truncar texto con "..." */
+  white-space: nowrap;        
+  overflow: hidden;           
+  text-overflow: ellipsis;    
+  max-width: 230px;            
+  display: block;             
 }
 .carta_title{
   flex-grow: 1;
@@ -191,18 +204,19 @@ input[type="checkbox"]:checked ~ body{
 
 @media (max-width: 400px){      
   .carta{
-    width: 263px;
-    height: 200px;
+    width: 320px;
+    height: 230px;
   }
   .carta_img{
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 180px;
   }
   .carta_img img{
-    height: 150px;
+    height: 175px;
   }
   .carta_title h3{
     font-size: 14px;
+    max-width: 150px;
   }
     .carta_botons li{
     font-size: 20px;

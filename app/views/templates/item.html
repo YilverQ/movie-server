@@ -4,26 +4,95 @@
 		<!-- Videos Items -->
 		<div class="flex_cartas">
 		{% for i in files %}
-			<div class="carta">
-				<div class="carta_img">
-					<img src="../static/img/thumbnails/{{ location }}/{{ i[:-4].replace('-',' ') }}.jpg" alt="Imagen de {{ i }}">
-				</div>
-				<div class="contenedorCartaBotons">
-					<div class="carta_title">
-						<h3>{{ i[:-4].title() }}</h3>
-					</div>
-					<div class="carta_botons">
-						<ul>
-							{% if ".mp4" in i %}
-							<li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}"><i class="fa-solid fa-play"></i></a></li>
-							{% endif %}
-							<li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}" download="true"><i class="fa-solid fa-download"></i></a></li>
-							<li class="tooltip"><p class="tooltip__message">¡Link copiado!</p><img class="imagenVLC" src="../static/img/vlc.png"><p class="hidden">http://{{ adress }}/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}</p></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+		    {# Detectamos el tipo de archivo por extensión #}
+		    {% set file_ext = i.split('.')[-1].lower() %}
+
+		    {# Video (MP4, AVI, MOV, etc.) #}
+		    {% if file_ext in ['mp4', 'avi', 'mov', 'mkv'] %}
+		        <div class="carta">
+		            <div class="carta_img">
+		                <img src="../static/img/thumbnails/{{ location }}/{{ i[:-4] }}.jpg" alt="Imagen de {{ i }}">
+		            </div>
+		            <div class="contenedorCartaBotons">
+		                <div class="carta_title">
+		                    <h3 title="{{ i[:-4].title() }}">{{ i[:-4].title() }}</h3>
+		                </div>
+		                <div class="carta_botons">
+		                    <ul>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}"><i class="fa-solid fa-play"></i></a></li>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}" download="true"><i class="fa-solid fa-download"></i></a></li>
+		                        <li class="tooltip">
+		                            <p class="tooltip__message">¡Link copiado!</p>
+		                            <img class="imagenVLC" src="../static/img/vlc.png">
+		                            <p class="hidden">http://{{ adress }}/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}</p>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+
+		    {# Música (MP3, WAV, FLAC, etc.) #}
+		    {% elif file_ext in ['mp3', 'wav', 'flac', 'ogg', 'm4a'] %}
+			    <div class="carta">
+		            <div class="carta_img">
+		                <img src="../static/img/music.png" class="imagen_music">
+		            </div>
+		            <div class="contenedorCartaBotons">
+		                <div class="carta_title">
+		                    <h3 title="{{ i[:-4].title() }}">{{ i[:-4].title() }}</h3>
+		                </div>
+		                <div class="carta_botons">
+		                    <ul>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}"><i class="fa-solid fa-play"></i></a></li>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}" download="true"><i class="fa-solid fa-download"></i></a></li>
+		                        <li class="tooltip">
+		                            <p class="tooltip__message">¡Link copiado!</p>
+		                            <img class="imagenVLC" src="../static/img/vlc.png">
+		                            <p class="hidden">http://{{ adress }}/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}</p>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+
+		    {# Documentos (PDF, DOCX, TXT, etc.) #}
+		    {% elif file_ext in ['jpg', 'jpeg', 'png', 'gif'] %}
+		        <div class="carta">
+		            <div class="carta_img">
+		                <img src="../static/img/picture.png" class="imagen_music">
+		            </div>
+		            <div class="contenedorCartaBotons">
+		                <div class="carta_title">
+		                    <h3 title="{{ i[:-4].title() }}">{{ i[:-4].title() }}</h3>
+		                </div>
+		                <div class="carta_botons">
+		                    <ul>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}"><i class="fa-solid fa-eye"></i></a></li>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}" download="true"><i class="fa-solid fa-download"></i></a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    {% else %}
+		        <div class="carta">
+		            <div class="carta_img">
+		                <img src="../static/img/docs.png" class="imagen_music">
+		            </div>
+		            <div class="contenedorCartaBotons">
+		                <div class="carta_title">
+		                    <h3 title="{{ i[:-4].title() }}">{{ i[:-4].title() }}</h3>
+		                </div>
+		                <div class="carta_botons">
+		                    <ul>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}"><i class="fa-solid fa-eye"></i></a></li>
+		                        <li><a href="/download_video/{{ location.replace('/', '&').replace(' ', '-') }}/{{ i }}" download="true"><i class="fa-solid fa-download"></i></a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    {% endif %}
 		{% endfor %}
+
 		<!-- Folder Items -->
 		{% for i in folders %}
 			<div class="carta_folder">
