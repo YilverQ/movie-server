@@ -58,17 +58,12 @@ article{
   padding: 0 10px;
 }
 .carta_title h3{
-  line-height: 50px;
-  font-size: 16px;
   font-family: fuente3;
   font-weight: 700;
   color: white;
 
   /* Para truncar texto con "..." */
-  white-space: nowrap;        
-  overflow: hidden;           
-  text-overflow: ellipsis;    
-  max-width: 230px;            
+  max-width: 300px;
   display: block;             
 }
 .carta_title{
@@ -205,14 +200,14 @@ input[type="checkbox"]:checked ~ body{
 @media (max-width: 400px){      
   .carta{
     width: 320px;
-    height: 230px;
+    height: auto;
   }
   .carta_img{
-    width: 300px;
-    height: 180px;
+    width: 320px;
   }
   .carta_img img{
-    height: 175px;
+    width: 100%;
+    height: 200px;
   }
   .carta_title h3{
     font-size: 14px;
